@@ -66,6 +66,8 @@ import Referral from './Components/Referral/Referral';
 import { getPaymentInitiated } from './redux/Features/PaymentSlice';
 import PaymentRefreshPopup from './Components/PaymentRefreshPopup/PaymentRefreshPopup';
 import ContactUs from './Components/ContactUs/ContactUs';
+import Blogs from './Components/Blogs/Blogs';
+import BlogView from './Components/BlogViewPage/BlogView';
 
 function App() {
   const dispatch = useDispatch()
@@ -195,6 +197,8 @@ function App() {
         <Route path='/cs' element={<CognitiveSkills />} />
         <Route path="*" element={<NotFound />} />
         <Route path='/logout' element={<Logout />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<BlogView />} /> 
         <Route path='/dashboard' element={<CVProfile />}>
           <Route path='referal' element={<Referral />} />
           <Route path="cv" element={<DashboardCv />} />

@@ -70,6 +70,7 @@ export default function EducatiomSummaryReview() {
         setList(education)
     },[education])
       
+    console.log(list,'this is list');
     return (
         <div className="edit-summary-preview-wrapper">
             <DragDropContext onDragEnd={onDragEnd}>
@@ -78,7 +79,7 @@ export default function EducatiomSummaryReview() {
                     {(provided, snapshot) => (
                         <div className='draggable-container' ref={provided.innerRef} {...provided.droppableProps} >
                             {
-                                list.map((item,index) => (
+                                list && list.map((item,index) => (
                                     <EditSwappableComponent 
                                         id={index + 1} 
                                         key={index} 
