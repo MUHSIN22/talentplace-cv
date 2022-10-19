@@ -11,7 +11,7 @@ import slide3 from '../../Assets/home slider/slide 3.jpg'
 import demoVideo from '../../Assets/video/Testimonial video.m4v'
 import { GrPlayFill } from 'react-icons/gr'
 import { IoMdPause } from 'react-icons/io'
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
+import { AiFillCloseCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import './Home.css'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -23,6 +23,7 @@ import circle from '../../Assets/circle.png'
 import Section2Animation from '../../AnimatedComponents/Section2Animation/Section2Animation'
 import Section3Animation from '../../AnimatedComponents/Section3Animation/Section3Animation'
 import BannerAnimation from '../../AnimatedComponents/bannerAnimation/BannerAnimation'
+import t20Banner from '../../Assets/t20 banner.png'
 
 let team = [
     {
@@ -52,9 +53,10 @@ export default function Home() {
     const [itemCount, setItemCount] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
     const [marginLeft, setMarginLeft] = useState(0);
+    const [tBanner, setTBanner] = useState(true)
     const sliderRef = useRef(null);
     const teamSectionRef = useRef(null);
-    const [link,setLink] = useState('')
+    const [link, setLink] = useState('')
 
     const defaultOptions = {
         loop: true,
@@ -118,6 +120,15 @@ export default function Home() {
             {/* <Header /> */}
             <main className="home-page">
                 <section className="home-banner" >
+                    {
+                        tBanner &&
+                        <div className="t20-wrapper">
+                            <div className="t20-close-wrapper" onClick={() => {console.log('here'); setTBanner(false)}}>
+                                <AiFillCloseCircle className='t20-close'  />
+                            </div>
+                            <img src={t20Banner} alt="" className="t20-banner" onClick={() => window.open("https://t20.talentplace.ai")} />
+                        </div>
+                    }
                     <div className="banner-content-wrapper">
                         <h1 className="banner-title">
                             Build a Data-Driven
@@ -134,7 +145,7 @@ export default function Home() {
                         {/* <Lottie options={{...defaultOptions,animationData: bannerAnimation}} className="banner-image" /> */}
                     </div>
                     {/* <img src={bannerWave} className="banner-wave" alt="" /> */}
-                    <svg id="wave" className='common-wave banner-wave' style={{transform:'rotate(0deg)', transition: '0.3s'}} viewBox="0 0 1440 110" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(239, 238, 228, 1)" offset="0%"></stop><stop stop-color="rgba(239, 238, 228, 1)" offset="100%"></stop></linearGradient></defs><path style={{transform:'translate(0, 0px)', opacity:1}} fill="url(#sw-gradient-0)" d="M0,77L24,75.2C48,73,96,70,144,60.5C192,51,240,37,288,34.8C336,33,384,44,432,53.2C480,62,528,70,576,69.7C624,70,672,62,720,64.2C768,66,816,77,864,71.5C912,66,960,44,1008,34.8C1056,26,1104,29,1152,40.3C1200,51,1248,70,1296,66C1344,62,1392,37,1440,27.5C1488,18,1536,26,1584,33C1632,40,1680,48,1728,47.7C1776,48,1824,40,1872,42.2C1920,44,1968,55,2016,58.7C2064,62,2112,59,2160,47.7C2208,37,2256,18,2304,22C2352,26,2400,51,2448,51.3C2496,51,2544,26,2592,25.7C2640,26,2688,51,2736,55C2784,59,2832,40,2880,33C2928,26,2976,29,3024,25.7C3072,22,3120,11,3168,9.2C3216,7,3264,15,3312,31.2C3360,48,3408,73,3432,86.2L3456,99L3456,110L3432,110C3408,110,3360,110,3312,110C3264,110,3216,110,3168,110C3120,110,3072,110,3024,110C2976,110,2928,110,2880,110C2832,110,2784,110,2736,110C2688,110,2640,110,2592,110C2544,110,2496,110,2448,110C2400,110,2352,110,2304,110C2256,110,2208,110,2160,110C2112,110,2064,110,2016,110C1968,110,1920,110,1872,110C1824,110,1776,110,1728,110C1680,110,1632,110,1584,110C1536,110,1488,110,1440,110C1392,110,1344,110,1296,110C1248,110,1200,110,1152,110C1104,110,1056,110,1008,110C960,110,912,110,864,110C816,110,768,110,720,110C672,110,624,110,576,110C528,110,480,110,432,110C384,110,336,110,288,110C240,110,192,110,144,110C96,110,48,110,24,110L0,110Z"></path></svg>
+                    <svg id="wave" className='common-wave banner-wave' style={{ transform: 'rotate(0deg)', transition: '0.3s' }} viewBox="0 0 1440 110" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(239, 238, 228, 1)" offset="0%"></stop><stop stop-color="rgba(239, 238, 228, 1)" offset="100%"></stop></linearGradient></defs><path style={{ transform: 'translate(0, 0px)', opacity: 1 }} fill="url(#sw-gradient-0)" d="M0,77L24,75.2C48,73,96,70,144,60.5C192,51,240,37,288,34.8C336,33,384,44,432,53.2C480,62,528,70,576,69.7C624,70,672,62,720,64.2C768,66,816,77,864,71.5C912,66,960,44,1008,34.8C1056,26,1104,29,1152,40.3C1200,51,1248,70,1296,66C1344,62,1392,37,1440,27.5C1488,18,1536,26,1584,33C1632,40,1680,48,1728,47.7C1776,48,1824,40,1872,42.2C1920,44,1968,55,2016,58.7C2064,62,2112,59,2160,47.7C2208,37,2256,18,2304,22C2352,26,2400,51,2448,51.3C2496,51,2544,26,2592,25.7C2640,26,2688,51,2736,55C2784,59,2832,40,2880,33C2928,26,2976,29,3024,25.7C3072,22,3120,11,3168,9.2C3216,7,3264,15,3312,31.2C3360,48,3408,73,3432,86.2L3456,99L3456,110L3432,110C3408,110,3360,110,3312,110C3264,110,3216,110,3168,110C3120,110,3072,110,3024,110C2976,110,2928,110,2880,110C2832,110,2784,110,2736,110C2688,110,2640,110,2592,110C2544,110,2496,110,2448,110C2400,110,2352,110,2304,110C2256,110,2208,110,2160,110C2112,110,2064,110,2016,110C1968,110,1920,110,1872,110C1824,110,1776,110,1728,110C1680,110,1632,110,1584,110C1536,110,1488,110,1440,110C1392,110,1344,110,1296,110C1248,110,1200,110,1152,110C1104,110,1056,110,1008,110C960,110,912,110,864,110C816,110,768,110,720,110C672,110,624,110,576,110C528,110,480,110,432,110C384,110,336,110,288,110C240,110,192,110,144,110C96,110,48,110,24,110L0,110Z"></path></svg>
                 </section>
 
                 <section className="easy-build-section container-padding">
@@ -185,8 +196,8 @@ export default function Home() {
                         </h3>
                     </div>
                     <div className="skill-industry-image-wrapper">
-                    {/* <Lottie options={{...defaultOptions,animationData:easyBuildAnimation}} className="skill-industry-image"/> */}
-                    <Section3Animation />
+                        {/* <Lottie options={{...defaultOptions,animationData:easyBuildAnimation}} className="skill-industry-image"/> */}
+                        <Section3Animation />
                         {/* <img src={thirdSectionImage} alt="" className="skill-industry-image" /> */}
                     </div>
                 </section>
@@ -217,7 +228,7 @@ export default function Home() {
                         </h3>
                     </div>
                     <div className="analytics-image-wrapper">
-                        <Lottie options={{...defaultOptions,animationData: graphAnimation}} className="analytics-image" />
+                        <Lottie options={{ ...defaultOptions, animationData: graphAnimation }} className="analytics-image" />
                         {/* <img src={fifthSectionImage} className="analytics-image" alt="" /> */}
                     </div>
                     <img src={orangeWave} alt="" className="analytics-wave" />
@@ -226,7 +237,7 @@ export default function Home() {
                 <section className="video-section container-padding">
                     <div className="video-wrapper">
                         <video width="100%" height="auto" controls={isPlaying} className='video-player'>
-                            <source src={demoVideo}/>
+                            <source src={demoVideo} />
                         </video>
                         {
                             !isPlaying &&

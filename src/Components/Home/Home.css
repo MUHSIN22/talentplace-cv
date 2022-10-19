@@ -30,6 +30,32 @@
 .home-banner p{
     text-align: left;
 }
+.t20-wrapper{
+    position: absolute;
+    width: 20rem;
+    left: 50%;
+    top: 5rem;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.t20-wrapper:hover{
+    transform: translateX(-50%) scale(1.05);
+}
+.t20-banner{
+    width: 100%;
+}
+.t20-close-wrapper{
+    position: absolute;
+    color: #fff;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.t20-close{
+    font-size: 1.3rem;
+}
 .home-banner .banner-wave{
     grid-area: wave;
     align-self: flex-end;
@@ -706,6 +732,9 @@
 }
 
 @media only screen and (max-width: 500px) {
+    .t20-wrapper{
+        width: 90%;
+    }
     .home-banner .banner-content-wrapper h1 {
         font-size: 1.5rem;
     }
