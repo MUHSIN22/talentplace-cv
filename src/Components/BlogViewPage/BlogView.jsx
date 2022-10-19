@@ -37,6 +37,10 @@ export default function BlogView() {
                                 <p className='posted'>Posted on 14/09/2022</p>
                             </div>
                         </div>
+                        <div className="mobile-article-follow">
+                            <button className="btn-comment btn-follow">Follow</button>
+                            <p className="author-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex voluptas adipisci provident ipsa ut quisquam tempore, cum impedit nisi reiciendis iure. Facere inventore, facilis perspiciatis quas dolorem minima nisi consectetur in. Non corrupti earum autem saepe laborum unde expedita animi alias! Hic corporis veritatis similique ducimus, cupiditate animi cum.</p>
+                        </div>
                         <h2 className="blog-title">Building a chat app with Socket.io and React Native</h2>
                         <p className="blog-content">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem porro optio iusto nihil provident! Nobis eveniet quis dolores veniam cumque architecto nisi optio rerum debitis iusto at et vel maxime, explicabo quae voluptatibus perspiciatis dignissimos voluptate animi molestiae id. Ipsum molestias sint quam et odit maiores dolorum laboriosam, debitis assumenda!

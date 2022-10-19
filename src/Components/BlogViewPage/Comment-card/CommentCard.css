@@ -26,3 +26,8 @@
     font-weight: 500;
     line-height: 1.5;
 }
+@media only screen and (max-width: 500px) {
+    .comment-body {
+        font-size: 0.85rem;
+    }
+}
