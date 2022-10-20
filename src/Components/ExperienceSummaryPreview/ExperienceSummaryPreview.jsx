@@ -89,7 +89,7 @@ export default function ExperienceSummaryPreview() {
                     {(provided, snapshot) => (
                         <div className='draggable-container' ref={provided.innerRef} {...provided.droppableProps} >
                             {
-                                list.map((item,index) => (
+                                list && list.map((item,index) => (
                                     <EditSwappableComponent 
                                         id={index + 1} 
                                         key={index} 

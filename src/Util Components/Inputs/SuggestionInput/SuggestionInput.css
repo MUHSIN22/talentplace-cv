@@ -14,6 +14,7 @@
     background: #fff;
     font-family: var(--font-montserrat);
     resize: none;
+    width: 100%;
 }
 .common-input-wrapper input:disabled{
     border: 1px solid rgba(0, 0, 0, 0.2);

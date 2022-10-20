@@ -24,24 +24,28 @@ import Section2Animation from '../../AnimatedComponents/Section2Animation/Sectio
 import Section3Animation from '../../AnimatedComponents/Section3Animation/Section3Animation'
 import BannerAnimation from '../../AnimatedComponents/bannerAnimation/BannerAnimation'
 import t20Banner from '../../Assets/t20 banner.png'
+import {ImQuotesLeft} from 'react-icons/im'
 
 let team = [
     {
         name: 'Anuradha',
         designation: "Team Lead",
         company: "Accenture",
+        image: slide1,
         testimonial: "Talentplace cv builder is highly recommended for experienced professionals. Even if you are not looking for a switch, this CV builder will show you the trajectory of your career and help you to plan it further. its roles and responsibility analysis and suggestion is impressive."
     },
     {
         name: 'Roshni Rawat',
         designation: "Senior Associate",
         company: "Larsen & Toubro Infotech",
+        image: slide2,
         testimonial: "TalentPlace cv builder is the most potent and must-use tool for growing professionals. It has very few data input points, and in most places, it uses its intelligent mechanism to analyze your skills, roles, responsibilities, etc., and develop a stunning resume."
     },
     {
         name: 'Tulsi Gurung',
         designation: "Marketing Specialist",
         company: "Book my Wizard",
+        image: slide3,
         testimonial: "I am wowed with this website. Putting my experience into words was the most challenging task for me, but with the help of TalentPlace CV builder, I created my CV within no time and with complete professionalism. It helped me represent my true self."
     }
 ]
@@ -75,8 +79,8 @@ export default function Home() {
             })
         }, 300)
 
-        setItemCount(sliderRef.current.children[1].children.length);
-        setSlideWidth(sliderRef.current.offsetWidth);
+        // setItemCount(sliderRef.current.children[1].children.length);
+        // setSlideWidth(sliderRef.current.offsetWidth);
     }, [])
 
     const navigateSlider = (direction) => {
@@ -123,8 +127,8 @@ export default function Home() {
                     {
                         tBanner &&
                         <div className="t20-wrapper">
-                            <div className="t20-close-wrapper" onClick={() => {console.log('here'); setTBanner(false)}}>
-                                <AiFillCloseCircle className='t20-close'  />
+                            <div className="t20-close-wrapper" onClick={() => { console.log('here'); setTBanner(false) }}>
+                                <AiFillCloseCircle className='t20-close' />
                             </div>
                             <img src={t20Banner} alt="" className="t20-banner" onClick={() => window.open("https://t20.talentplace.ai")} />
                         </div>
@@ -284,12 +288,29 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="team-section container-padding">
+                {/* <section className="team-section container-padding">
                     {/* <img src={circle} className="bg-circle" alt="" /> */}
                     <div className="testimonial-circle">
                         <div className="testimonial-inner-circle"></div>
                     </div>
-                    <div className="team-content" ref={teamSectionRef}>
+                    <div className="testimonial-card-wrapper">
+                        {
+                            team.map((member, index) => (
+                                <div className="testimonial-card" key={index}>
+                                    <img src={member.image} alt="" className="testimonial-profile" />
+                                    <div className="name-and-des">
+                                        <h5 className="testimonial-name">{member.name}</h5>
+                                        <p className="testimonial-des">{member.designation} ({member.company})</p>
+                                    </div>
+                                    <p className="testimonial-content">
+                                        <ImQuotesLeft className="card-quote"/>
+                                        {member.testimonial}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    {/* <div className="team-content" ref={teamSectionRef}>
                         <p className="team-para">
                             {team[marginLeft].testimonial}
                         </p>
@@ -314,8 +335,8 @@ export default function Home() {
                             <img src={slide2} alt="L&T Infotech " width="100px" className="team-slide" />
                             <img src={slide3} alt="Marketing Strategiest " width="100px" className="team-slide" />
                         </div>
-                    </div>
-                </section>
+                    </div> */}
+                </section> */}
 
                 <section className="resume-section container-padding">
                     <h2 className="title-secondary">Pick a resume template. <br /> that defines you best.</h2>

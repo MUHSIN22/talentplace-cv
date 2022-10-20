@@ -156,7 +156,7 @@ function Step6() {
                 <SelectInput value={form.currency_id} name='currency_id' disabled={isFresher} handleChange={(e) => setForm({...form,currency_id: e.target.value}) } label="Preffered Currency for the entire career profile" options={currencyList} name_field='currency_name' />
             </div>
             <div className="form-row date-row">
-                <PlainInput value={form.heading} name='heading' disabled={isFresher} handleChange={(e) => setForm({...form,heading: e.target.value}) } label="Headling"/>
+                <PlainInput value={form.heading} name='heading' disabled={isFresher} handleChange={(e) => setForm({...form,heading: e.target.value}) } label="Headline"/>
             </div>
             <div className="control-group">
                 <label className="control control-checkbox">
