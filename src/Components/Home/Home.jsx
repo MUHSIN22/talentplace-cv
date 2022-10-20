@@ -288,8 +288,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* <section className="team-section container-padding">
-                    {/* <img src={circle} className="bg-circle" alt="" /> */}
+                <section className="team-section container-padding">
                     <div className="testimonial-circle">
                         <div className="testimonial-inner-circle"></div>
                     </div>
@@ -310,33 +309,8 @@ export default function Home() {
                             ))
                         }
                     </div>
-                    {/* <div className="team-content" ref={teamSectionRef}>
-                        <p className="team-para">
-                            {team[marginLeft].testimonial}
-                        </p>
-                        <strong className="team-member-name">{team[marginLeft].name}</strong>
-                        <p className="team-member-designation">{team[marginLeft].designation}</p>
-                        <p className="team-member-company">{team[marginLeft].company}</p>
-                    </div>
-                    <div className="team-slider" ref={sliderRef}>
-                        <div className="slider-nav-wrapper">
-                            <div className="slider-nav" onClick={() => navigateSlider(-1)}>
-                                <AiOutlineLeft />
-                            </div>
-                            <div className="slider-nav" onClick={() => navigateSlider(1)}>
-                                <AiOutlineRight />
-                            </div>
-                        </div>
-                        <div className="team-slider-wrapper" style={{
-                            gridTemplateColumns: `repeat(${itemCount},${slideWidth}px)`,
-                            marginLeft: `-${marginLeft * slideWidth}px`
-                        }}>
-                            <img src={slide1} alt="Accenture " width="100px" className="team-slide" />
-                            <img src={slide2} alt="L&T Infotech " width="100px" className="team-slide" />
-                            <img src={slide3} alt="Marketing Strategiest " width="100px" className="team-slide" />
-                        </div>
-                    </div> */}
-                </section> */}
+                    
+                </section>
 
                 <section className="resume-section container-padding">
                     <h2 className="title-secondary">Pick a resume template. <br /> that defines you best.</h2>
