@@ -32,3 +32,16 @@
     background: rgba(255, 161, 20, 1);
     color: #fff;
 }
+
+@media only screen and (max-width: 500px) {
+    .form-controller-primary .btn-controller {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        height: max-content;
+        width: max-content;
+        margin: 0;
+    }
+    .portfolio-form {
+        width: 100%;
+    }
+}

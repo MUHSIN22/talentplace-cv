@@ -132,14 +132,16 @@ export default function RolesEditForm() {
         }
     }, [debouncedSearchState, searchSkillList, dispatch])
     useEffect(() => {
-        try {
-            const body = {
-                job_title_id: data.designation_id,
-                search_role: '',
-                page_no: ''
+        if(data.designation_id){
+            try {
+                const body = {
+                    job_title_id: data.designation_id,
+                    search_role: '',
+                    page_no: ''
+                }
+                dispatch(getRoleSuggestionList({ auth: token, body })).unwrap()
+            } catch (e) {
             }
-            dispatch(getRoleSuggestionList({ auth: token, body })).unwrap()
-        } catch (e) {
         }
 
         return () => {

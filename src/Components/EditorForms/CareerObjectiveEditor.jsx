@@ -56,14 +56,16 @@ export default function CareerObjectiveEditor() {
         }
     }
     useEffect(() => {
-        try {
-            const body = {
-                job_title_id: job_title_id,
-                search_role: '',
-                page_no: ''
+        if(job_title_id){
+            try {
+                const body = {
+                    job_title_id: job_title_id,
+                    search_role: '',
+                    page_no: ''
+                }
+                dispatch(getSummaryList({ auth: token, body })).unwrap()
+            } catch (e) {
             }
-            dispatch(getSummaryList({ auth: token, body })).unwrap()
-        } catch (e) {
         }
 
         return () => {

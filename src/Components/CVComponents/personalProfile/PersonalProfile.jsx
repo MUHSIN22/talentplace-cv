@@ -45,7 +45,7 @@ export default function PersonalProfile() {
                         firstCompany && firstCompany.nature_of_job_name &&
                         <div className="personal-contact">
                             <Note />
-                            <span>{firstCompany.nature_of_job_name}</span>
+                            <span>{firstCompany.nature_of_job_name}({resume_info ? resume_info.preferred_mode : ""})</span>
                         </div>
                     }
                     {

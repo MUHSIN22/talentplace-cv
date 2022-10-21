@@ -100,7 +100,7 @@ export default function PortfolioForm() {
     }
 
     return (
-        <div className="main-form-wrapper">
+        <div className="main-form-wrapper portfolio-form">
             <h2 className="form-title">Showcase your Portfolio</h2>
             <p className='form-subtitle'>You can add upto 5 projects</p>
             <PlainInput name='portfolio_title' value={form.portfolio_title} label="Title" placeholder="Project name" handleChange={(e) => setForm({...form,[e.target.name]: e.target.value})}/>
