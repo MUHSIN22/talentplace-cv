@@ -192,12 +192,12 @@ export default function DesignationForm() {
             <div className="grid-1-1">
                 {/* {dateConverter(form.start_date)} */}
                 <DateInput value={dateConverter(form.start_date)} defaultValue={form.start_date} name='start_date' handleChange={handleDesignationForm} type='date' label='Start of this Job role' placeholder='MM YYYY' />
-                <PlainInput isSalary={true} type="text" value={form.start_salary && (form.start_salary).toString().replace(commaSeparatorRegex,',')} name='start_salary'  handleChange={handleDesignationForm} label='Starting Salary in this Job role (Numbers only)' placeholder='120000' />
+                <PlainInput isSalary={true} value={form.start_salary && form.start_salary} name='start_salary' type="number"  handleChange={handleDesignationForm} label='Starting Salary in this Job role (Numbers only)' placeholder='120000' />
                 {/* <SelectInput value={form.start_salary_currency} name='start_salary_currency' handleChange={handleDesignationForm} label='Currency(same for the entire career profile)' options={currencyList} name_field='currency_name' /> */}
             </div>
             <div className="grid-1-1">
                 <DateInput value={dateConverter(form.end_date)} name='end_date' isDisabled={(isCurrentWorking || form.current_working === "yes") ? true : false} handleChange={handleDesignationForm} type='date' label='End of this Job role' placeholder='MM YYYY' />
-                <PlainInput isSalary={true} type="text" value={form.end_salary && (form.end_salary).toString().replace(commaSeparatorRegex,',')} name='end_salary'  handleChange={handleDesignationForm} label='End Salary in this Job role (Numbers only)' placeholder='180000' />
+                <PlainInput isSalary={true}  value={form.end_salary && form.end_salary} name='end_salary' type="number"  handleChange={handleDesignationForm} label='End Salary in this Job role (Numbers only)' placeholder='180000' />
                 {/* <SelectInput value={form.end_salary_currency} name='end_salary_currency' handleChange={handleDesignationForm} label='Currency(same for the entire career profile)' options={currencyList} name_field='currency_name' width={100} /> */}
             </div>
             <label className="control control-checkbox">

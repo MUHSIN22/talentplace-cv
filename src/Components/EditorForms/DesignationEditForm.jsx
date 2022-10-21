@@ -200,11 +200,11 @@ export default function DesignationEditForm() {
             </label>
             <div className="grid-1-1">
                 <DateInput value={dateConverter(form.start_date)} defaultValue={form.start_date} name='start_date' handleChange={handleDesignationForm} type='date' label='Start of this Job role' placeholder='MM YYYY' />
-                <PlainInput isSalary={true} type="text" value={form.start_salary && (form.start_salary).toString().replace(commaSeparatorRegex, ',')} name='start_salary' handleChange={handleDesignationForm} label='Starting Salary in this Job role (Numbers only)' placeholder='120000' />
+                <PlainInput isSalary={true} type="number" value={form.start_salary && form.start_salary} label='Starting Salary in this Job role (Numbers only)' placeholder='120000' />
             </div>
             <div className="grid-1-1">
                 <DateInput value={dateConverter(form.end_date)} name='end_date' isDisabled={(isCurrentWorking || (form.current_working && form.current_working === "yes") ) ? true : false} handleChange={handleDesignationForm} type='date' label='End of this Job role' placeholder='MM YYYY' />
-                <PlainInput isSalary={true} type="text" value={form.end_salary && (form.end_salary).toString().replace(commaSeparatorRegex, ',')} name='end_salary' handleChange={handleDesignationForm} label='End Salary in this Job role (Numbers only)' placeholder='180000' />
+                <PlainInput isSalary={true} type="number" value={form.end_salary && form.end_salary} name='end_salary' handleChange={handleDesignationForm} label='End Salary in this Job role (Numbers only)' placeholder='180000' />
             </div>
             <label className="control control-checkbox">
                 I am currently working in this job role
