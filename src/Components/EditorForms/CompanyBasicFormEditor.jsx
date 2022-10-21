@@ -17,7 +17,7 @@ const DEBOUNCE_DELAY = 600;
 export default function CompanyBasicFormEditor() {
     const company = useSelector(SelectCompanyDetails)
     const companyID = useSelector(selectCompanyForEdit)
-    const [companyDetails, setCompanyDetails] = useState(company.filter((company) => company.company_record_id === companyID)[0] ? company.filter((company) => company.company_record_id === companyID)[0] : {})
+    const [companyDetails, setCompanyDetails] = useState([])
     const navigate = useNavigate()
     const dispatch = useDispatch();
     const [form, setForm] = useState({
@@ -155,6 +155,14 @@ export default function CompanyBasicFormEditor() {
             setSearch(companyDetails.company_name)
         }
     }, [companyDetails])
+
+
+    useEffect(() => {
+        if(company){
+            let data = company.filter((company) => company.company_record_id === companyID)[0] ? company.filter((company) => company.company_record_id === companyID)[0] : {}
+            setCompanyDetails(data)
+        }
+    },[company])
 
     useEffect(() => {
         if (message === "Company Added") {
