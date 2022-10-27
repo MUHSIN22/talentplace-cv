@@ -26,7 +26,7 @@ export default function CareerObjectiveEditor() {
     const token = useSelector(selectAuthToken)
     const user_id = useSelector(selectUser_id)
     const resumeInfo = useSelector(selectResumeInfo)
-    const job_title_id = resumeInfo.company && resumeInfo.company[0].job_role && resumeInfo.company[0].job_role[0].designation_id
+    const job_title_id = resumeInfo?.company && resumeInfo.company[0].job_role && resumeInfo.company[0].job_role[0].designation_id
     const roleSuggestions = useSelector(selectSummarySuggestionList)
     const handleSuggestion = (value) => {
         setForm({ ...form, your_bio: form.your_bio + value })

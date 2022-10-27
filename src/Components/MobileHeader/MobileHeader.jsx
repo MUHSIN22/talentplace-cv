@@ -62,6 +62,9 @@ export default function MobileHeader() {
                         <Link to="/dashboard/plans">Membership</Link>
                     </li>
                     <li className="link" onClick={hideMenu}>
+                        <Link to="/dashboard/referal">Refer</Link>
+                    </li>
+                    <li className="link" onClick={hideMenu}>
                         <Link to="/dashboard/settings">Settings</Link>
                     </li>
                     <li onClick={logout}>Logout</li>

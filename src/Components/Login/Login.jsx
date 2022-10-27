@@ -129,7 +129,7 @@ export default function Login() {
                     <div className="form-row">
                         <button onClick={handleSubmit} className='btn primary'>{loading?'Logging in':'Continue'}  <ChevronRight /></button>
                     </div>
-                    <div className="form-row noGap align-center">
+                    {/* <div className="form-row noGap align-center">
                         <span className='line'></span>
                         <p>Or</p>
                         <span className='line'></span>
@@ -140,7 +140,7 @@ export default function Login() {
                     </div>
                     <div className="form-row my-2">
                         <button onClick={handleMobileLogin} className='btn secondary'>Login with Phone Number</button>
-                    </div>
+                    </div> */}
                     <div className="form-row noGap align-center">
                         <span className='line'></span>
                         <p className='w-100'>Don't have a Talentplace account?</p>

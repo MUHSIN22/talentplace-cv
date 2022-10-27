@@ -1,0 +1,64 @@
+.assesment-card{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+}
+.assesment-card .card-label{
+    padding: 1rem;
+    border-bottom: 2px solid var(--orange-muted);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.assesment-card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.assesment-card .card-title{
+    font-size: 1rem;
+}
+.assesment-card-description{
+    font-size: 0.9rem;
+    text-align: justify;
+}
+.assesment-card .card-timer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.assesment-card .timer-icon{
+    font-size: 1.2rem;
+}
+.btn-card-details{
+    width: max-content;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgb(241,112,77);
+    background: linear-gradient(137deg, rgba(241,112,77,1) 52%, rgba(240,148,123,1) 100%);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: auto;
+}
+@media only screen and (max-width: 500px) {
+    .assesment-card-description {
+        font-size: 0.8rem;
+    }
+    .assesment-card .card-level{
+        font-size: 0.9rem;
+    }
+    .assesment-card .timer{
+        font-size: 0.8rem;
+    }
+    .assesment-card-body {
+        gap: 0.5rem;
+    }
+}

@@ -30,7 +30,6 @@ export default function CreatePassword() {
         if (Validation(form, dispatch)) {
             try {
                 dispatch(createPassword({ ...form, user_id: reg_id })).unwrap()
-
             } catch (error) {
             }
         }

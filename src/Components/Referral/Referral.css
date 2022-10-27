@@ -31,6 +31,38 @@
     width: max-content;
     font-size: 0.9rem;
     cursor: pointer;
+    position: relative;
+}
+.btn-invite:hover .social-link-invite{
+    display: flex;
+}
+.social-link-invite{
+    width: max-content;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    left: 50%;
+    transform: translate(-50%,100%);
+    display: none;
+}
+.social-link-invite::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #fff;
+    transform: translate(-50%,-50%) rotate(45deg) ;
+    transform-origin: center;
+}
+.social-link-invite .tooltip-icon{
+    font-size: 1.5rem;
 }
 .referal-section-heading{
     color: #554c60;

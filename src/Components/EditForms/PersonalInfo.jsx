@@ -17,7 +17,7 @@ export default function PersonalInfo() {
   const data = useSelector(selectResumeDetails)
   const token = useSelector(selectAuthToken)
   const currentEmail = data.email, currentContact = data.contact;
-  const [profilePic, setProfilePic] = useState(data.resume_info.profile_pic || profile)
+  const [profilePic, setProfilePic] = useState(data.resume_info?.profile_pic || profile)
   const [profileFile, setProfileFile] = useState(null);
   const [isMobileEditable, setMobileEditable] = useState(false);
   const [isEmailEditable, setEmailEditable] = useState(false);
@@ -38,7 +38,7 @@ export default function PersonalInfo() {
     gender: data.gender,
     heading: data.heading,
     currency_id: data.currency_id,
-    job_start_date: data?.resume_info.job_start_date ? moment(data?.resume_info.job_start_date,'dd-mm-yyyy').format('yyyy-mm'): null,
+    job_start_date: data?.resume_info?.job_start_date ? moment(data?.resume_info?.job_start_date,'dd-mm-yyyy').format('yyyy-mm'): null,
     dob: (() => {
       let splittedDate = data.dob.split('-');
       return splittedDate[2] + "-" + splittedDate[1] + "-" + splittedDate[0]

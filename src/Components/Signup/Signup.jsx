@@ -55,6 +55,8 @@ export default function Signup() {
     const handleSubmit = (e) => {
         e.preventDefault()
         let body = form
+        let user_ref = localStorage.getItem("user_ref");
+        body.referrer_code = user_ref
         body.address = location
         body.country_code = countryCode
         if (Validation(body, dispatch)) {

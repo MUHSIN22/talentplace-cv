@@ -13,7 +13,7 @@ import { GrPlayFill } from 'react-icons/gr'
 import { IoMdPause } from 'react-icons/io'
 import { AiFillCloseCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import './Home.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import ResumeSlider from '../ResumeSlider/ResumeSlider'
@@ -61,6 +61,7 @@ export default function Home() {
     const sliderRef = useRef(null);
     const teamSectionRef = useRef(null);
     const [link, setLink] = useState('')
+    const location = useLocation();
 
     const defaultOptions = {
         loop: true,
@@ -112,6 +113,17 @@ export default function Home() {
         video.play();
         setPlaying(true)
     }
+ 
+    useEffect(() => {
+        console.log(location,'this is location');
+        if(location){
+            let queryParams = new URLSearchParams(location.search);
+            let value = queryParams.get('user');
+            if(value){
+                localStorage.setItem('user_ref',value)
+            }
+        }
+    },[location])
 
     // useEffect(() => {
     //     API.post("/download-sample-file",{user_id: 203})

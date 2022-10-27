@@ -68,6 +68,9 @@ import PaymentRefreshPopup from './Components/PaymentRefreshPopup/PaymentRefresh
 import ContactUs from './Components/ContactUs/ContactUs';
 import Blogs from './Components/Blogs/Blogs';
 import BlogView from './Components/BlogViewPage/BlogView';
+import AssesmentList from './Components/AssementUI/AssesmentList/AssesmentList';
+import AssesmentDetails from './Components/AssementUI/AssesmentDetails/AssesmentDetails';
+import AssesmentQuestion from './Components/AssementUI/AssesmentQuestion/AssesmentQuestion';
 
 function App() {
   const dispatch = useDispatch()
@@ -198,7 +201,14 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path='/logout' element={<Logout />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog/:id" element={<BlogView />} /> 
+        <Route path="/blog/:id" element={<BlogView />} />
+
+        {/* Assesment pages */}
+        <Route path='/assesment-list' element={<AssesmentList />} />
+        <Route path='/assesment-details' element={<AssesmentDetails />} />
+        <Route path='/assesment-result' element={<AssesmentDetails />} />
+        <Route path='/assesment-question' element={<AssesmentQuestion />} />
+
         <Route path='/dashboard' element={<CVProfile />}>
           <Route path='referal' element={<Referral />} />
           <Route path="cv" element={<DashboardCv />} />

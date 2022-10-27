@@ -6,6 +6,7 @@ import myProfile from '../../Assets/sidebar icons/my profile.png'
 import membership from '../../Assets/sidebar icons/membership.png'
 import settings from '../../Assets/sidebar icons/settings.png'
 import logoutIcon from '../../Assets/sidebar icons/logout.png'
+import referalIcon from '../../Assets/sidebar icons/my portfolio.png'
 import { useRef } from 'react';
 import { reload, resetResume } from '../../redux/Features/ResumeSlice';
 import { useDispatch } from 'react-redux';
@@ -57,6 +58,10 @@ export default function CVProfileSidebar() {
                 <NavLink to="/dashboard/plans" className="sidebar-link">
                     <img src={membership} alt="" className="sidebar-link-icon" />
                     <span className='sidebar-link-text'>Membership</span>
+                </NavLink>
+                <NavLink to="/dashboard/referal" className="sidebar-link">
+                    <img src={referalIcon} alt="" className="sidebar-link-icon" />
+                    <span className='sidebar-link-text'>Refer</span>
                 </NavLink>
                 <NavLink to="/dashboard/settings" className="sidebar-link">
                     <img src={settings} alt="" className="sidebar-link-icon" />
