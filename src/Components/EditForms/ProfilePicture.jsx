@@ -6,7 +6,7 @@ export default function ProfilePicture() {
         <>
         <h1 className='text-left'>Lastly, add your favourite profile picture and treat yourself to celebrate.</h1>
             <div className="form-row">
-                    <DragDropInput/>
+                <DragDropInput/>
             </div>
             <div className="flex-row-end g-1">
             <div className="col-30 mt-2">

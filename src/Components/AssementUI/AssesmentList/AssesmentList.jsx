@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { getAssessments, selectAssessments } from '../../../redux/Features/AssesmentSlice'
 import AssesmentCard from '../../../Util Components/AssementCard/AssesmentCard'
 import AssesmentSelect from '../../../Util Components/Assesment-Searchable-Select/AssesmentSelect'
 import './AssesmentList.css'
 
 export default function AssesmentList() {
+    const dispatch = useDispatch()
+    const assessments = useSelector(selectAssessments);
+
+    useEffect(() => {
+        dispatch(getAssessments);
+    },[])
+
+    useEffect(() => {
+        console.log(assessments,'this is assessments');
+    },[assessments])
     return (
         <div className="assesment-list-page-wrapper">
             <span className="bg-rectangle"></span>

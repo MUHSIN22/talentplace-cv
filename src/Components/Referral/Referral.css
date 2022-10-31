@@ -2,19 +2,22 @@
     grid-area: cv;
 }
 .referal-landing{
-    background-image: url('../../Assets/referal/bg.png');
+    background: #f0967d99;
     width: 100%;
-    min-height: 20rem;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 100000px 10px rgba(0,0,0,0.8);
     color: #fff;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
+    padding-bottom: 5rem;
+}
+.referal-landing-left{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     gap: 1rem;
+    color: #2e2e2e;
+    align-self: center;
 }
 .referal-landing h1{
     font-family: var(--font-monserrate);
@@ -22,6 +25,11 @@
 }
 .referal-landing p{
     margin: 0;
+}
+.referal-main-illustatration{
+    width: 80%;
+    align-self: center;
+    justify-self: center;
 }
 .btn-invite{
     background: #fe8f76;
@@ -94,7 +102,9 @@
 .section-condition a{
     color: blue;
 }
-
+.referal-points{
+    color: #2e2e2e;
+}
 @media only screen and (max-width: 768px) {
     .referal-landing{
         padding: 1rem;
@@ -105,6 +115,11 @@
     .section-condition{
         padding: 1rem;
     }
+    .referal-landing{
+        padding: 3rem 1rem;
+        padding-top: 5rem;
+    }
+
 }
 @media only screen and (max-width: 500px) {
     .referal-title{
@@ -127,5 +142,12 @@
     }
     .section-condition{
         margin: 1rem 0;
+    }
+    .referal-landing{
+        padding: 2rem 1rem;
+        grid-template-columns: 1fr;
+    }
+    .referal-points{
+        text-align: center;
     }
 }
